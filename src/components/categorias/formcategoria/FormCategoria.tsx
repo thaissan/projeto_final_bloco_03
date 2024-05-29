@@ -45,7 +45,7 @@ function FormCategoria() {
       try {
         await atualizar(`/categorias`, categoria, setCategoria)
 
-        alert('Categoria atualizado com sucesso')
+        alert('Categoria atualizada com sucesso')
 
       } catch (error: any) {
         alert('Erro ao atualizar o Categoria')
@@ -85,10 +85,10 @@ function FormCategoria() {
           <input
             type="text"
             placeholder="Categoria"
-            name='tipo'
+            name='nome'
             className="border-2 border-slate-700 rounded p-2 utral-800"
             required
-            value={categoria.tipo}
+            value={categoria.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
         </div>
@@ -106,8 +106,8 @@ function FormCategoria() {
             wrapperStyle={{}}
             wrapperClass="blocks-wrapper mx-auto"
             visible={true}
-            /> :
-            <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
+            /> : (
+            <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span> )
           }
         </button>
       </form>
