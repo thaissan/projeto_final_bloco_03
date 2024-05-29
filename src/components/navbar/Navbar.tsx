@@ -26,6 +26,7 @@ function Navbar() {
                 font-medium
             ">
                  <Link to='/home'>
+                    <div className="flex items-center gap-3">
                     <img
                         src="src\assets\logo.png"
                         alt="Logo"
@@ -33,6 +34,7 @@ function Navbar() {
                         relative w-30 text-black'
                     />
                     <h1>FarmaVida</h1>
+                    </div>
                 </Link>
                 <div className="flex-1 flex justify-right items-center relative w-30">
                     </div>
